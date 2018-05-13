@@ -9,7 +9,7 @@
 #include <vector>
 #include <stdexcept>
 
-#if __cplusplus < 201402L
+#if __cplusplus < 201402L && !defined(_WIN32)
 namespace std {
     template<class T> struct _Unique_if {
         typedef unique_ptr<T> _Single_object;
